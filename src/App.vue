@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { ref } from 'vue';
 
 const count = ref(0);
@@ -9,10 +9,27 @@ const addCount = () => {
 const subCount = () => {
   count.value = count.value - 1;
 }
+</script> -->
+
+<script> // options api style
+  export default {
+    data(){
+      return {
+        count: 0
+      }
+    },
+    methods: {
+      addCount() {
+        this.count = this.count + 1;
+      },
+      subCount() {
+        this.count = this.count + 1;
+      },
+    },
+  }
 </script>
 
 <template>
-
   <main>
     <div>
       <h2>The current count is:</h2>
